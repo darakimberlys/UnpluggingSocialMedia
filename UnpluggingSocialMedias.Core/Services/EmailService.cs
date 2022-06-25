@@ -1,6 +1,13 @@
-﻿namespace UnpluggingSocialMedia.Core.Services;
+﻿using System.Net.Mail;
 
-public class EmailService
+namespace UnpluggingSocialMedias.Core.Services;
+
+public class EmailService : MailMessage
 {
-    
+
+    public EmailService()
+    {
+
+    }
+
 }

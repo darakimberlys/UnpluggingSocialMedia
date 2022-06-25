@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace UnpluggingSocialMedia.Core.Services;
+namespace UnpluggingSocialMedias.Core.Services;
 
 public class WhatsAppDeserializerService
 {
