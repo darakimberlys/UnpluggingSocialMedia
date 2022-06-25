@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GmgpItx6UmaMROyaEv7r1CHLqNCwJ9AzLksxBZsDY7n2vlehVwMzRs3hdL0jIho1MS6RWkKyedLROtzeic+ryg==",
+  "success": true,
+  "projectFilePath": "C:\\Source\\.Study\\UnpluggingSocialMedia\\UnpluggingSocialMedias\\UnpluggingSocialMedias.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DaraKimberlydeSouza\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512"
+  ],
+  "logs": []
+}

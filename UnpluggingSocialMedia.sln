@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpluggingSocialMedia", "AllMessagesToEmail\UnpluggingSocialMedia.csproj", "{3B283097-5312-4A09-9D8A-B8D291DFAC47}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FF63738F-DFB5-4013-9C38-BFFD64DA6398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpluggingSocialMedia.Core", "AllMessagesToEmail.Core\UnpluggingSocialMedia.Core.csproj", "{AB06F842-B672-4177-AE5E-57897EC2DEB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpluggingSocialMedias", "UnpluggingSocialMedias\UnpluggingSocialMedias.csproj", "{2B5095A6-BDFA-4B43-91D1-69EB15BA528A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpluggingSocialMedias.Core", "UnpluggingSocialMedias.Core\UnpluggingSocialMedias.Core.csproj", "{B6AC2F8C-0BAE-4858-A74C-6782DF09FA32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,17 +15,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B283097-5312-4A09-9D8A-B8D291DFAC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B283097-5312-4A09-9D8A-B8D291DFAC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B283097-5312-4A09-9D8A-B8D291DFAC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B283097-5312-4A09-9D8A-B8D291DFAC47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB06F842-B672-4177-AE5E-57897EC2DEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB06F842-B672-4177-AE5E-57897EC2DEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB06F842-B672-4177-AE5E-57897EC2DEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB06F842-B672-4177-AE5E-57897EC2DEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5095A6-BDFA-4B43-91D1-69EB15BA528A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5095A6-BDFA-4B43-91D1-69EB15BA528A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5095A6-BDFA-4B43-91D1-69EB15BA528A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5095A6-BDFA-4B43-91D1-69EB15BA528A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6AC2F8C-0BAE-4858-A74C-6782DF09FA32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AC2F8C-0BAE-4858-A74C-6782DF09FA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AC2F8C-0BAE-4858-A74C-6782DF09FA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AC2F8C-0BAE-4858-A74C-6782DF09FA32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2B5095A6-BDFA-4B43-91D1-69EB15BA528A} = {FF63738F-DFB5-4013-9C38-BFFD64DA6398}
+		{B6AC2F8C-0BAE-4858-A74C-6782DF09FA32} = {FF63738F-DFB5-4013-9C38-BFFD64DA6398}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4B5AE60-BBCD-4D0B-AE3D-BED7003684F8}
