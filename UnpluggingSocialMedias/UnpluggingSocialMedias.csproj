@@ -10,4 +10,13 @@
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
 	  </ItemGroup>
 
+	  <ItemGroup>
+	    <Folder Include="Controller\" />
+	    <Folder Include="Ioc\" />
+	  </ItemGroup>
+
+	  <ItemGroup>
+	    <ProjectReference Include="..\UnpluggingSocialMedias.Core\UnpluggingSocialMedias.Core.csproj" />
+	  </ItemGroup>
+
 </Project>

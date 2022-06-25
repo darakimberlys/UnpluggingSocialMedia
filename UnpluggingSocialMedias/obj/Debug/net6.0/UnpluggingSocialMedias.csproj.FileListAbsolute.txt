@@ -19,3 +19,13 @@ C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\obj\Debug\net6.0\r
 C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\obj\Debug\net6.0\UnpluggingSocialMedias.pdb
 C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\obj\Debug\net6.0\UnpluggingSocialMedias.genruntimeconfig.cache
 C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\obj\Debug\net6.0\ref\UnpluggingSocialMedias.dll
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\UnpluggingSocialMedias.Core.deps.json
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\UnpluggingSocialMedias.Core.runtimeconfig.json
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\UnpluggingSocialMedias.Core.exe
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\InstagramApiSharp.dll
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\WebDriver.dll
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\UnpluggingSocialMedias.Core.dll
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\bin\Debug\net6.0\UnpluggingSocialMedias.Core.pdb
+C:\Source\.Study\UnpluggingSocialMedia\UnpluggingSocialMedias\obj\Debug\net6.0\UnpluggingSocialMedias.csproj.CopyComplete
