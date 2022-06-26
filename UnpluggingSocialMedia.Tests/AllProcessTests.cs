@@ -1,17 +1,17 @@
-using Moq;
-using UnpluggingSocialMedias.Core.Domain;
-using UnpluggingSocialMedias.Core.Services.Email;
-using UnpluggingSocialMedias.Core.Services.Interfaces;
+using UnpluggingSocialMedias.Core.Services.Insta;
 
 namespace UnpluggingSocialMedia.Tests
 {
     public class AllProcessTests
     {
         private readonly IEmailService _emailService;
+        private readonly IInstaMessagingService _instaMessagingService;
         private readonly Mock<IPollyPolicyService> _pollyMock;
 
         public AllProcessTests()
         {
+
+            _instaMessagingService = new InstaMessagingService();
 
             _emailService = new EmailService(
                 _pollyMock.Object);
@@ -29,6 +29,20 @@ namespace UnpluggingSocialMedia.Tests
 
         [Fact]
         public async Task JustSendEmailSuccess()
+        {
+            var message = new MessageData
+            {
+                Message = "Teste",
+                SocialMedia = "Instagram",
+                Subject = "Test",
+                UserSender = "Eu meixma"
+            };
+
+            await _emailService.CreateMessage(message);
+        }
+
+        [Fact]
+        public async Task ReceiveDirectAndEmailSuccess()
         {
             var message = new MessageData
             {

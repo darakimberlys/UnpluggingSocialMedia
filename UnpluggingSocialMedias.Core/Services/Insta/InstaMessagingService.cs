@@ -1,5 +1,4 @@
 ﻿using InstagramApiSharp;
-using InstagramApiSharp.API.Processors;
 using InstagramApiSharp.Classes;
 using InstagramApiSharp.Classes.Models;
 using InstagramApiSharp.Enums;
@@ -9,11 +8,33 @@ namespace UnpluggingSocialMedias.Core.Services.Insta;
 
 public class InstaMessagingService : IInstaMessagingService
 {
+    public Task<IResult<InstaDirectInboxContainer>> GetDirectInboxAsync(PaginationParameters paginationParameters)
+    {
+
+        //receive and send to email
+        throw new NotImplementedException();
+    }
+
+    public Task<IResult<InstaDirectInboxThread>> GetDirectInboxThreadAsync(string threadId, PaginationParameters paginationParameters)
+    {
+        //receive and send to email
+        throw new NotImplementedException();
+    }
+
+    public Task<IResult<InstaDirectInboxThreadList>> SendDirectTextAsync(string recipients, string threadIds, string text)
+    {
+        //send message received by email
+        throw new NotImplementedException();
+
+    }
+
+    #region Ignore
+
     public Task<IResult<InstaDirectInboxThread>> AddUserToGroupThreadAsync(string threadId, params long[] userIds)
     {
         throw new NotImplementedException();
     }
-
+    
     public Task<IResult<bool>> ApproveDirectPendingRequestAsync(params string[] threadIds)
     {
         //review by email and implement bool 
@@ -39,19 +60,6 @@ public class InstaMessagingService : IInstaMessagingService
     {
         throw new NotImplementedException();//not needed
     }
-
-    public Task<IResult<InstaDirectInboxContainer>> GetDirectInboxAsync(PaginationParameters paginationParameters)
-    {
-        //receive and send to email
-        throw new NotImplementedException();
-    }
-
-    public Task<IResult<InstaDirectInboxThread>> GetDirectInboxThreadAsync(string threadId, PaginationParameters paginationParameters)
-    {
-        //receive and send to email
-        throw new NotImplementedException();
-    }
-
     public Task<IResult<InstaDirectInboxContainer>> GetPendingDirectAsync(PaginationParameters paginationParameters)
     {
         throw new NotImplementedException();
@@ -179,19 +187,10 @@ public class InstaMessagingService : IInstaMessagingService
     {
         throw new NotImplementedException();
     }
-
     public Task<IResult<bool>> SendDirectProfileToRecipientsAsync(long userIdToSend, string recipients)
     {
         throw new NotImplementedException();
     }
-
-    public Task<IResult<InstaDirectInboxThreadList>> SendDirectTextAsync(string recipients, string threadIds, string text)
-    {
-        //send message received by email
-        throw new NotImplementedException();
-
-    }
-
     public Task<IResult<bool>> SendDirectVideoAsync(InstaVideoUpload video, string threadId)
     {
         throw new NotImplementedException();//not needed
@@ -221,12 +220,10 @@ public class InstaMessagingService : IInstaMessagingService
     {
         throw new NotImplementedException();//not needed
     }
-
     public Task<IResult<InstaSharing>> ShareUserAsync(string userIdToSend, string threadId)
     {
         throw new NotImplementedException();//not needed
     }
-
     public Task<IResult<bool>> UnLikeThreadMessageAsync(string threadId, string itemId)
     {
         throw new NotImplementedException();
@@ -246,4 +243,7 @@ public class InstaMessagingService : IInstaMessagingService
     {
         throw new NotImplementedException();
     }
+
+    #endregion
+
 }
