@@ -1,40 +1,56 @@
-﻿using System.Collections;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mail;
-using System.Net.Mime;
+using UnpluggingSocialMedias.Core.Domain;
 using UnpluggingSocialMedias.Core.Services.Interfaces;
 
 namespace UnpluggingSocialMedias.Core.Services.Email;
 
 public class EmailService : IEmailService
 {
-    public EmailService()
+    private readonly IPollyPolicyService _pollyPolicyService;
+    private readonly string _emailSender;
+    private readonly string _emailPassword;
+    private readonly string _emailReceiver;
+
+    public EmailService(IPollyPolicyService policyService)
     {
+        _pollyPolicyService = policyService;
+        _emailSender = Environment.GetEnvironmentVariable("EMAIL_SENDER");
+        _emailPassword = Environment.GetEnvironmentVariable("EMAIL_PASSWORD");
+        _emailReceiver = Environment.GetEnvironmentVariable("EMAIL_RECEIVER");
     }
 
-    public void CreateMessage()
+    public async Task CreateMessage(MessageData messageData)
     {
-        var msg = new MailMessage()
+        var retryPolicy = _pollyPolicyService.GetRetryPolicy();
+
+        try
         {
-            From = new MailAddress(Environment.GetEnvironmentVariable("EMAIL_SENDER")),
-            To = { Environment.GetEnvironmentVariable("EMAIL_RECEIVER") }
-        };
+            var msg = new MailMessage
+            {
+                From = new MailAddress(_emailSender),
+                To = { _emailReceiver }
+            };
 
-        var smtp = new SmtpClient()
+            var smtp = new SmtpClient("smtp.gmail.com", 587)
+            {
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(_emailSender, _emailPassword),
+                EnableSsl = true
+            };
+            
+            msg.Subject = $"{messageData.SocialMedia} - {messageData.UserSender}: {messageData.Subject}";
+            msg.Body = messageData.Message;
+
+            await retryPolicy.ExecuteAsync(async () =>
+            {
+                smtp.Send(msg);
+            });
+        }
+        catch (Exception e)
         {
-            Host = "smtp.gmail.com",
-            Port = 587,
-            Credentials = new NetworkCredential(
-                Environment.GetEnvironmentVariable("EMAIL_SENDER"),
-                Environment.GetEnvironmentVariable("EMAIL_PASSWORD")),
-            EnableSsl = true
-        };
-
-
-        msg.Subject = "Test Application";
-        msg.Body = "Testing application";
-
-        smtp.Send(msg);
+            Console.WriteLine(e);
+            throw;
+        }
     }
-
 }

@@ -1,6 +1,8 @@
-﻿namespace UnpluggingSocialMedias.Core.Services.Interfaces;
+﻿using UnpluggingSocialMedias.Core.Domain;
+
+namespace UnpluggingSocialMedias.Core.Services.Interfaces;
 
 public interface IEmailService
 {
-    void CreateMessage();
+    Task CreateMessage(MessageData messageData);
 }

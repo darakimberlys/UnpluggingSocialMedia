@@ -37,7 +37,7 @@ public class RequesterController
         //}
         try
         {
-            _emailService.CreateMessage();
+            //_emailService.CreateMessage();
             return new AcceptedResult();
         }
         catch (Exception e)

@@ -9,11 +9,13 @@
 
 	<ItemGroup>
 		<PackageReference Include="InstagramApiSharp" Version="1.7.2" />
+		<PackageReference Include="Polly" Version="7.2.3" />
 		<PackageReference Include="Selenium.WebDriver" Version="4.2.0" />
 		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="102.0.5005.6102" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Domain\" />
 	  <Folder Include="Services\Facebook\" />
 	  <Folder Include="Services\Interfaces\" />
 	  <Folder Include="Services\Telegram\" />
